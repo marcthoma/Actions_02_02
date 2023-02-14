@@ -30,7 +30,7 @@ jobs:
   job4:
     name: Vierter Job
     runs-on: macos-latest
-    needs: [job1, job2, job3]
+    needs: [Ubuntu, job2, job3]
     steps:
       - name: Schritt 1
         run: date      
