@@ -1,0 +1,34 @@
+name: workflow1
+
+on: push
+    branches:
+      - main
+    
+jobs:
+  job1:
+    name: Erster Job
+    runs-on: ubuntu-latest
+    steps:
+      name: Schritt 1
+    
+  job2:
+    name: Zweiter Job
+    runs-on: windows-latest
+    steps:
+      name: Schritt 1
+    
+
+  job3:
+    name: Dritter Job
+    runs-on: macos-latest
+    steps:
+      name: Schritt 1
+    
+
+  job4:
+    name: Vierter Job
+    runs-on: macos-latest
+    needs: [job1, job2, job3]
+    steps:
+      name: Schritt 1
+      
