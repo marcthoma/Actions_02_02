@@ -10,27 +10,27 @@ jobs:
     name: Erster Job
     runs-on: ubuntu-latest
     steps:
-      name: Schritt 1
-      run: date
+      - name: Schritt 1
+        run: date
     
   job2:
     name: Zweiter Job
     runs-on: windows-latest
     steps:
-      name: Schritt 1
-      run: date
+      - name: Schritt 1
+        run: date
 
   job3:
     name: Dritter Job
     runs-on: macos-latest
     steps:
-      name: Schritt 1
-      run: date
+      - name: Schritt 1
+        run: date
 
   job4:
     name: Vierter Job
     runs-on: macos-latest
     needs: [job1, job2, job3]
     steps:
-      name: Schritt 1
-      run: date      
+      - name: Schritt 1
+        run: date      
